@@ -1,0 +1,28 @@
+{
+  "name": "crud-clubes",
+  "version": "1.0.0",
+  "description": "Basic CRUD for r-argentina-programa",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "handlebars": "^4.7.6",
+    "multer": "^1.4.2",
+    "rsdi": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "cypress": "^4.12.1",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.4.0"
+  }
+}
