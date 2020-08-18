@@ -19,7 +19,6 @@ class ClubController {
     res.render('base', {
       layout: 'base',
     });
-    // res.sendFile('base.handlebars', { root: path.resolve('src/module/view/layout') });
   }
 
   async create() {
