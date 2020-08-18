@@ -7,6 +7,17 @@ const multer = require('multer');
 
 const { ClubController, ClubService, ClubRepository } = require('../module/club/module');
 
+function getDBPath() {
+  return process.env.JSON_DB_PATH;
+}
+
+function addCommonDefinitions(container) {
+  container.addDefinitions({
+    fs,
+    JSONDB: factory(getDBPath),
+  });
+}
+
 function addClubModuleDefinitions(container) {
   container.addDefinitions({
     ClubController: object(ClubController).construct(
@@ -19,6 +30,7 @@ function addClubModuleDefinitions(container) {
 
 module.exports = function configureDI() {
   const container = new DIContainer();
+  addCommonDefinitions(container);
   addClubModuleDefinitions(container);
   return container;
 };
