@@ -34,7 +34,7 @@ module.exports = class ClubRepository {
 
   async getClub(id) {
     const DbContent = this.readDB();
-    const club = DbContent.find((tempClub) => tempClub.id === id);
+    const club = DbContent.find((tempClub) => tempClub.id == id);
 
     if (!club) {
       throw new Error('Club not found');

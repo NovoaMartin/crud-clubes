@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm,node,dotenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,node,dotenv
 
+### database ###
+data/
+
 ### dotenv ###
 .env
 
@@ -217,3 +220,12 @@ fabric.properties
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,node,dotenv
+/data/
+.eslintrc.json
+.idea/.gitignore
+.idea/crud-clubes.iml
+.idea/inspectionProfiles/
+.idea/jsLinters/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml

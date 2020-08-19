@@ -10,6 +10,7 @@ class ClubController {
   configureRoutes(app) {
     app.get('/', this.index.bind(this));
     app.get(`${this.ROUTE}`, this.index.bind(this));
+    app.get(`${this.ROUTE}/:team`, this.retrieve.bind(this));
     app.get(`${this.ROUTE}/create`, this.create.bind(this));
     app.get(`${this.ROUTE}/update/:team`, this.update.bind(this));
     app.get(`${this.ROUTE}/delete/:team`, this.delete.bind(this));
@@ -21,6 +22,16 @@ class ClubController {
       layout: 'base',
       data: {
         clubs,
+      },
+    });
+  }
+
+  async retrieve(req, res) {
+    const club = await this.clubService.getClub(req.params.team);
+    res.render('club', {
+      layour: 'base',
+      data: {
+        club,
       },
     });
   }
