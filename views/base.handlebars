@@ -4,13 +4,13 @@
         {{#each data.clubs as |club|}}
             <div class="media mt-3 club">
                 <img src="{{club.crestUrl}}" class="crest mr-3" alt="{{club.shortName}}">
-                <div class="media-body d-flex flex-row">
-                    <h5 class="mt-0 col-3">{{club.name}}</h5>
-                    <div class="col-6">
+                <div class="media-body d-flex flex-row row">
+                    <h5 class="mt-0 col-sm-3">{{club.name}}</h5>
+                    <div class="col-sm-6">
                         Home: {{club.venue}} <br>
                         Founded: {{club.founded}} <br>
                     </div>
-                    <div class="col-3">
+                    <div class="col-sm-3">
                         <a href="/club/{{club.id}}">
                             <button type="button" class="btn btn-info">Detail</button>
                         </a>

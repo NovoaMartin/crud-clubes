@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">CRUD-clubes</a>
-        <a href="/club/"><button class="btn btn-light border-dark mr-3">Indice</button></a>
-        <a href="/club/create"><button class="btn btn-light border-dark">Agregar Club</button></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light row">
+        <div class="col-sm-2">
+            <a class="navbar-brand" href="/">CRUD-clubes</a>
+        </div>
+        <div class="col-sm-3">
+            <a href="/club/">
+                <button class="btn btn-light border-dark mr-3">Team List</button>
+            </a>
+            <a href="/club/create">
+                <button class="btn btn-light border-dark">Add Team</button>
+            </a>
+        </div>
     </nav>
     {{{body}}}
 </body>
