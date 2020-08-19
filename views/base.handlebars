@@ -1,1 +1,29 @@
-<h1>Test view</h1>
+<div class="container-fluid">
+
+    <div id="teamList" class="d-flex flex-column">
+        {{#each data.clubs as |club|}}
+            <div class="media mt-3 club">
+                <img src="{{club.crestUrl}}" class="crest mr-3" alt="{{club.shortName}}">
+                <div class="media-body d-flex flex-row">
+                    <h5 class="mt-0 col-3">{{club.name}}</h5>
+                    <div class="col-6">
+                        Home: {{club.venue}} <br>
+                        Founded: {{club.founded}} <br>
+                    </div>
+                    <div class="col-3">
+                        <a href="/club/{{club.id}}">
+                            <button type="button" class="btn btn-info">Detail</button>
+                        </a>
+                        <a href="/club/update/{{club.id}}">
+                            <button class="btn btn-primary">Edit</button>
+                        </a>
+                        <a href="/club/delete/{{club.id}}">
+                            <button class="btn btn-danger">Delete</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+</div>
