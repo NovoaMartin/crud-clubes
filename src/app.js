@@ -4,12 +4,15 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const { init } = require('./module/club/module.js');
 const configureDI = require('./config/di');
+const initDB = require('./module/club/job/downloadFromAPI');
 
 const app = express();
 const port = process.env.PORT || 80;
 const hbs = exphbs.create({
   defaultLayout: 'base',
 });
+
+initDB();
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
