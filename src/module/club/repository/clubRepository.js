@@ -43,14 +43,13 @@ module.exports = class ClubRepository {
   }
 
   readDB() {
-    const data = this.fileSystem.readFileSync(this.db, { encoding: 'utf-8' });
+    const data = this.filesystem.readFileSync(this.db, { encoding: 'utf-8' });
     let jsoncontent;
     try {
       jsoncontent = JSON.parse(data);
     } catch (e) {
       jsoncontent = [];
     }
-
     return jsoncontent;
   }
 
