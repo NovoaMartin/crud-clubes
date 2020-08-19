@@ -24,7 +24,7 @@ function addClubModuleDefinitions(container) {
       get('ClubService'),
     ),
     ClubService: object(ClubService).construct(get('ClubRepository')),
-    ClubRepository: object(ClubRepository),
+    ClubRepository: object(ClubRepository).construct(get('fs'), get('JSONDB')),
   });
 }
 
