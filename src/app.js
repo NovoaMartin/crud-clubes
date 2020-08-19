@@ -16,11 +16,9 @@ initDB();
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.use('/', express.static('../public'));
-
+app.use(express.static(path.join(__dirname, '../public')));
 const container = configureDI();
 
 init(app, container);
 
 app.listen(port, () => console.log(`Server listening at port ${port}`));
-console.log(__dirname);
