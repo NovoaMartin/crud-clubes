@@ -1,0 +1,26 @@
+<form class="d-flex row">
+        <div class="col-sm-3">
+            <img id="crest" src="{{data.club.crestUrl}}" alt="{{data.club.shortName}}">
+            <label for="crestUploadBtn">Upload new crest:</label>
+            <input type="file" class="form-control-file" id="crestUploadBtn">
+        </div>
+        <div class="col-sm-6">
+
+            <h3>Name: <input class="form-control form-control-lg"" type="text" value="{{data.club.name}}"></h3>
+            <p><strong>Address: </strong><input class="form-control" type="text" value="{{data.club.address}}"></p>
+            <p><strong>phone: </strong><input class="form-control" type="text" value="{{data.club.phone}}"></p>
+            <p><strong>website: </strong><input class="form-control" type="text" value="{{data.club.website}}"></p>
+            <p><strong>email: </strong><input class="form-control" type="text" value="{{data.club.email}}"></p>
+            <p><strong>founded: </strong><input class="form-control" type="text" value="{{data.club.founded}}"></p>
+            <p><strong>venue: </strong><input class="form-control" type="text" value="{{data.club.venue}}"></p>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+    <div class="col-sm-3">
+        <a href="/club/{{club.id}}">
+            <button type="button" class="btn btn-info">Back</button>
+        </a>
+        <a href="/club/delete/{{club.id}}">
+            <button class="btn btn-danger">Delete</button>
+        </a>
+    </div>
+</form>

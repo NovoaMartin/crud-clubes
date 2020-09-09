@@ -29,7 +29,7 @@ class ClubController {
   async retrieve(req, res) {
     const club = await this.clubService.getClub(req.params.team);
     res.render('club', {
-      layour: 'base',
+      layout: 'base',
       data: {
         club,
       },
@@ -40,8 +40,14 @@ class ClubController {
 
   }
 
-  async update() {
-
+  async update(req, res) {
+    const club = await this.clubService.getClub(req.params.team);
+    res.render('clubEdit', {
+      layout: 'base',
+      data: {
+        club,
+      },
+    });
   }
 
   async delete(req, res) {
