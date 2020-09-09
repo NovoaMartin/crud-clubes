@@ -12,7 +12,7 @@ const hbs = exphbs.create({
   defaultLayout: 'base',
 });
 
-initDB();
+// initDB();
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

@@ -44,8 +44,9 @@ class ClubController {
 
   }
 
-  async delete() {
-
+  async delete(req, res) {
+    await this.clubService.delete(req.params.team);
+    res.redirect('/club');
   }
 }
 

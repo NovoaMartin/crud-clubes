@@ -24,7 +24,7 @@ module.exports = class ClubRepository {
 
   async delete(club) {
     let DbContent = this.readDB();
-    DbContent = DbContent.filter((tempClub) => tempClub !== club);
+    DbContent = DbContent.filter((tempClub) => tempClub.id != club);
     this.saveToDB(DbContent);
   }
 
