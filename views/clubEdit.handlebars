@@ -1,18 +1,20 @@
-<form class="d-flex row">
+<!--suppress ALL -->
+<form class="d-flex row" action="/club/save" method="POST" enctype="multipart/form-data">
         <div class="col-sm-3">
             <img id="crest" src="{{data.club.crestUrl}}" alt="{{data.club.shortName}}">
             <label for="crestUploadBtn">Upload new crest:</label>
-            <input type="file" class="form-control-file" id="crestUploadBtn">
+            <input type="file" name="crest" class="form-control-file" id="crestUploadBtn">
         </div>
         <div class="col-sm-6">
+            <input type="hidden" name="id" value="{{data.club.id}}" readonly />
 
-            <h3>Name: <input class="form-control form-control-lg"" type="text" value="{{data.club.name}}"></h3>
-            <p><strong>Address: </strong><input class="form-control" type="text" value="{{data.club.address}}"></p>
-            <p><strong>phone: </strong><input class="form-control" type="text" value="{{data.club.phone}}"></p>
-            <p><strong>website: </strong><input class="form-control" type="text" value="{{data.club.website}}"></p>
-            <p><strong>email: </strong><input class="form-control" type="text" value="{{data.club.email}}"></p>
-            <p><strong>founded: </strong><input class="form-control" type="text" value="{{data.club.founded}}"></p>
-            <p><strong>venue: </strong><input class="form-control" type="text" value="{{data.club.venue}}"></p>
+            <h3>Name: <input name="name" class="form-control form-control-lg" type="text" value="{{data.club.name}}"></h3>
+            <p><strong>Address: </strong><input name="address" class="form-control" type="text" value="{{data.club.address}}"></p>
+            <p><strong>phone: </strong><input name="phone" class="form-control" type="text" value="{{data.club.phone}}"></p>
+            <p><strong>website: </strong><input name="website" class="form-control" type="text" value="{{data.club.website}}"></p>
+            <p><strong>email: </strong><input name="email" class="form-control" type="text" value="{{data.club.email}}"></p>
+            <p><strong>founded: </strong><input name="founded" class="form-control" type="text" value="{{data.club.founded}}"></p>
+            <p><strong>venue: </strong><input name="venue" class="form-control" type="text" value="{{data.club.venue}}"></p>
             <input type="submit" class="btn btn-primary" value="Submit">
         </div>
     <div class="col-sm-3">

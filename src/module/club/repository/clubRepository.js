@@ -8,7 +8,7 @@ module.exports = class ClubRepository {
 
   async save(club) {
     const DbContent = this.readDB();
-    const index = DbContent.findIndex((tempClub) => tempClub.id === club.id);
+    const index = DbContent.findIndex((tempClub) => tempClub.id == club.id);
     if (index === -1) {
       DbContent.push(club);
     } else {

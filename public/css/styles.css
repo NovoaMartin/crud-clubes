@@ -1,6 +1,11 @@
-#crest{
-    height:266px;
-    width:266px;
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img{
+    max-height:266px;
+    max-width:266px;
 }
 
 .club{
