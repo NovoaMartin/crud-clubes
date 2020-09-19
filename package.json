@@ -2,10 +2,10 @@
   "name": "crud-clubes",
   "version": "1.0.0",
   "description": "Basic CRUD for r-argentina-programa",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "nodemon": "nodemon -e js src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
   "author": "",
   "license": "ISC",
