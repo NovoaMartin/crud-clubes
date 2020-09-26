@@ -1,8 +1,9 @@
 <!--suppress ALL -->
 <form class="d-flex row" action="/club/save" method="POST" enctype="multipart/form-data">
         <div class="col-sm-3">
-            <img id="crest" src="{{data.club.crestUrl}}" alt="{{data.club.shortName}}">
             <label for="crestUploadBtn">Upload new crest:</label>
+            <br/>
+            <img id="crest" src="{{data.club.crestUrl}}" alt="{{data.club.shortName}}">
             <input type="file" name="crest" class="form-control-file" id="crestUploadBtn">
         </div>
         <div class="col-sm-6">

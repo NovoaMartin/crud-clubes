@@ -11,3 +11,8 @@ img{
 .club{
     border-bottom: 1px solid black;
 }
+
+.detailsCrest {
+    max-height: 100%;
+    max-width: 100%;
+}
