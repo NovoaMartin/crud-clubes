@@ -1,9 +1,9 @@
 <!--suppress ALL -->
 <form class="d-flex row" action="/club/save" method="POST" enctype="multipart/form-data">
         <div class="col-sm-3">
-            <label for="crestUploadBtn">Upload new crest:</label>
+            <img id="crest" class="detailsCrest" src="{{data.club.crestUrl}}" alt="{{data.club.shortName}}">
             <br/>
-            <img id="crest" src="{{data.club.crestUrl}}" alt="{{data.club.shortName}}">
+            <label for="crestUploadBtn">Upload new crest:</label>
             <input type="file" name="crest" class="form-control-file" id="crestUploadBtn">
         </div>
         <div class="col-sm-6">
@@ -19,10 +19,10 @@
             <input type="submit" class="btn btn-primary" value="Submit">
         </div>
     <div class="col-sm-3">
-        <a href="/club/{{club.id}}">
+        <a href="/club/view/{{data.club.id}}">
             <button type="button" class="btn btn-info">Back</button>
         </a>
-        <a href="/club/delete/{{club.id}}">
+        <a href="/club/delete/{{data.club.id}}">
             <button class="btn btn-danger">Delete</button>
         </a>
     </div>

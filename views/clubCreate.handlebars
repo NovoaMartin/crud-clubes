@@ -1,0 +1,26 @@
+<!--suppress ALL -->
+<form class="d-flex row" action="/club/save" method="POST" enctype="multipart/form-data">
+        <div class="col-sm-3">
+            <img id="crest" class="detailsCrest">
+            <br/>
+            <label for="crestUploadBtn">Upload crest:</label>
+            <input type="file" name="crest" class="form-control-file" id="crestUploadBtn">
+        </div>
+        <div class="col-sm-6">
+            <input type="hidden" name="id" value="" readonly />
+
+            <h3>Name: <input name="name" class="form-control form-control-lg" type="text" placeholder="Name" required></h3>
+            <p><strong>Address: </strong><input name="address" class="form-control" type="text" placeholder="Address" required></p>
+            <p><strong>phone: </strong><input name="phone" class="form-control" type="text" placeholder="Phone"></p>
+            <p><strong>website: </strong><input name="website" class="form-control" type="text" placeholder="Website"></p>
+            <p><strong>email: </strong><input name="email" class="form-control" type="text" placeholder="Email"></p>
+            <p><strong>founded: </strong><input name="founded" class="form-control" type="text" placeholder="Founded" required></p>
+            <p><strong>venue: </strong><input name="venue" class="form-control" type="text" placeholder="Venue" required></p>
+            <input type="submit" class="btn btn-primary" value="Create">
+        </div>
+    <div class="col-sm-3">
+        <a href="/club/">
+            <button type="button" class="btn btn-info">Back</button>
+        </a>
+    </div>
+</form>

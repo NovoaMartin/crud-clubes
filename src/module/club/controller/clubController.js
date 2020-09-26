@@ -38,8 +38,10 @@ class ClubController {
     });
   }
 
-  async create() {
-
+  async create(req, res) {
+    res.render('clubCreate', {
+      layout: 'base',
+    });
   }
 
   async update(req, res) {
@@ -53,6 +55,12 @@ class ClubController {
   }
 
   async delete(req, res) {
+    console.log('ASD');
+    if (req.params.team) {
+      console.log('Yes');
+    } else {
+      console.log('No');
+    }
     await this.clubService.delete(req.params.team);
     res.redirect('/club');
   }
