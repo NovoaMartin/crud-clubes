@@ -56,7 +56,7 @@ class ClubController {
 
   async delete(req, res) {
     await this.clubService.delete(req.params.team);
-    res.redirect('/club');
+    res.redirect(this.ROUTE);
   }
 
   async save(req, res) {
@@ -71,7 +71,7 @@ class ClubController {
       console.log(`ERROR: During clubController.save() ${e}`);
     }
 
-    res.redirect('/club');
+    res.redirect(this.ROUTE);
   }
 }
 

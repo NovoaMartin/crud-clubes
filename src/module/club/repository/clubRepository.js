@@ -7,25 +7,25 @@ module.exports = class ClubRepository {
   }
 
   async save(club) {
-    const DbContent = this.readDB();
-    const index = DbContent.findIndex((tempClub) => tempClub.id == club.id);
+    const dbContent = this.readDB();
+    const index = dbContent.findIndex((tempClub) => tempClub.id == club.id);
     if (index === -1) {
-      DbContent.push(club);
+      dbContent.push(club);
     } else {
-      const clubOld = DbContent[index];
-      DbContent[index] = club;
+      const clubOld = dbContent[index];
+      dbContent[index] = club;
       if (!club.crestUrl) {
-        DbContent[index].crestUrl = clubOld.crestUrl;
+        dbContent[index].crestUrl = clubOld.crestUrl;
       }
     }
 
-    this.saveToDB(DbContent);
+    this.saveToDB(dbContent);
   }
 
   async delete(club) {
-    let DbContent = this.readDB();
-    DbContent = DbContent.filter((tempClub) => tempClub.id != club);
-    this.saveToDB(DbContent);
+    let dbContent = this.readDB();
+    dbContent = dbContent.filter((tempClub) => tempClub.id != club);
+    this.saveToDB(dbContent);
   }
 
   async getClubs() {
@@ -33,8 +33,8 @@ module.exports = class ClubRepository {
   }
 
   async getClub(id) {
-    const DbContent = this.readDB();
-    const club = DbContent.find((tempClub) => tempClub.id == id);
+    const dbContent = this.readDB();
+    const club = dbContent.find((tempClub) => tempClub.id == id);
 
     if (!club) {
       throw new Error('Club not found');
@@ -44,13 +44,13 @@ module.exports = class ClubRepository {
 
   readDB() {
     const data = this.filesystem.readFileSync(this.db, { encoding: 'utf-8' });
-    let jsoncontent;
+    let jsonContent;
     try {
-      jsoncontent = JSON.parse(data);
+      jsonContent = JSON.parse(data);
     } catch (e) {
-      jsoncontent = [];
+      jsonContent = [];
     }
-    return jsoncontent;
+    return jsonContent;
   }
 
   saveToDB(data) {
