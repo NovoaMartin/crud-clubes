@@ -8,6 +8,7 @@ class ClubController {
     this.uploadMiddleware = uploadMiddleware;
   }
 
+  /* istanbul ignore next */
   configureRoutes(app) {
     app.get('/', this.index.bind(this));
     app.get(`${this.ROUTE}`, this.index.bind(this));
@@ -68,7 +69,6 @@ class ClubController {
       }
       await this.clubService.save(club);
     } catch (e) {
-      console.log(`ERROR: During clubController.save() ${e}`);
     }
 
     res.redirect(this.ROUTE);
